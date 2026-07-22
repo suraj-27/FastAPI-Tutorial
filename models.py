@@ -28,7 +28,7 @@ class Post(Base):
     id : Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
     title : Mapped[str] = mapped_column(String(100), nullable=False)
     content : Mapped[str] = mapped_column(Text, nullable=False)
-    user_id : Mapped[str] = mapped_column(ForeignKey("users.id"), index=True, nullable=False)
+    user_id : Mapped[int] = mapped_column(ForeignKey("users.id"), index=True, nullable=False)
     date_posted: Mapped[str] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(UTC))
     author : Mapped[User] = relationship(back_populates="posts")     
     

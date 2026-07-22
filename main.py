@@ -1,5 +1,5 @@
 """
-Fastapi tutorial with code with camp
+Fastapi tutorial with "code with camp"
 
 Simple FastAPI student API example.
 
